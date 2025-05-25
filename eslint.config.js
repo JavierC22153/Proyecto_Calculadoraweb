@@ -30,5 +30,14 @@ export default [
         { allowConstantExport: true }
       ]
     }
+  },
+  {
+    files: ['**/*.test.js', '**/*.test.jsx'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.vitest
+      }
+    }
   }
 ]
